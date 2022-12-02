@@ -12,6 +12,7 @@ provider "docker" {}
 
 # Create Container
 resource "docker_container" "lss" {
+  user = "roor:root"
   image = docker_image.lss.latest
   name  = "lss"
   ports {
